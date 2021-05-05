@@ -107,5 +107,41 @@ public class App {
       jobLauncher.run(job, params);
       System.out.println("-------Job ends ----------");
   }  
+  
+  
+  
+  
+  java doc
+  
+  <properties>
+    <poi.version>3.16</poi.version>
+<maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+       <source.version>1.8</source.version>
+        <target.version>1.8</target.version>
+  </properties>
+  
+   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+       <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <source>${source.version}</source>
+                    <target>${target.version}</target>
+                </configuration>
+            </plugin>
+       
+    </plugins>
+  </build>
+
+
+mvn javadoc:javadoc
 
 
